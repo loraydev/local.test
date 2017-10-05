@@ -1,0 +1,227 @@
+# Logfile created on 2017-10-06 00:51:40 +0200 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 00:51:40 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ac8ac982] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [ac8ac982] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ac8ac982] Finished in 3.816 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-staging-loray.sh 100.0%
+  INFO [7fefb6e3] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh as dev@127.0.0.1
+ DEBUG [7fefb6e3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh
+  INFO [7fefb6e3] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [87f43b08] Running /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD as dev@127.0.0.1
+ DEBUG [87f43b08] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD )
+ DEBUG [87f43b08] 	Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+ DEBUG [87f43b08] 	Permission denied (publickey).
+ DEBUG [87f43b08] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 00:55:40 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [77deab95] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [77deab95] Command: /usr/bin/env mkdir -p /tmp
+  INFO [77deab95] Finished in 1.921 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-staging-loray.sh 100.0%
+  INFO [dc6427c4] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh as dev@127.0.0.1
+ DEBUG [dc6427c4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh
+  INFO [dc6427c4] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [075fbf1f] Running /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD as dev@127.0.0.1
+ DEBUG [075fbf1f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD )
+ DEBUG [075fbf1f] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f	HEAD
+  INFO [075fbf1f] Finished in 1.602 seconds with exit status 0 (successful).
+  INFO [9d341459] Running /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases as dev@127.0.0.1
+ DEBUG [9d341459] Command: /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases
+  INFO [9d341459] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [801e4e15] Running [ -f /home/dev/www/local.test/current/REVISION ] as dev@127.0.0.1
+ DEBUG [801e4e15] Command: [ -f /home/dev/www/local.test/current/REVISION ]
+ DEBUG [801e4e15] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [823408d9] Running [ -f /home/dev/www/local.test/repo/HEAD ] as dev@127.0.0.1
+ DEBUG [823408d9] Command: [ -f /home/dev/www/local.test/repo/HEAD ]
+ DEBUG [823408d9] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [5934d71d] Running if test ! -d /home/dev/www/local.test; then echo "Directory does not exist '/home/dev/www/local.test'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [5934d71d] Command: if test ! -d /home/dev/www/local.test; then echo "Directory does not exist '/home/dev/www/local.test'" 1>&2; false; fi
+ DEBUG [5934d71d] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [684d71de] Running /usr/bin/env git clone --mirror git@github.com:loraydev/local.test.git /home/dev/www/local.test/repo as dev@127.0.0.1
+ DEBUG [684d71de] Command: cd /home/dev/www/local.test && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git clone --mirror git@github.com:loraydev/local.test.git /home/dev/www/local.test/repo )
+ DEBUG [684d71de] 	Cloning into bare repository '/home/dev/www/local.test/repo'...
+ DEBUG [684d71de] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+  INFO [684d71de] Finished in 1.827 seconds with exit status 0 (successful).
+ DEBUG [75b68c5d] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [75b68c5d] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [75b68c5d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [d889edf7] Running /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git as dev@127.0.0.1
+ DEBUG [d889edf7] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git )
+  INFO [d889edf7] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [a74ff5cb] Running /usr/bin/env git remote update --prune as dev@127.0.0.1
+ DEBUG [a74ff5cb] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a74ff5cb] 	Fetching origin
+  INFO [a74ff5cb] Finished in 1.648 seconds with exit status 0 (successful).
+ DEBUG [855a3cbd] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [855a3cbd] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [855a3cbd] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [08494bc6] Running /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005225544 as dev@127.0.0.1
+ DEBUG [08494bc6] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005225544 )
+  INFO [08494bc6] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [f33580ea] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005225544 as dev@127.0.0.1
+ DEBUG [f33580ea] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005225544 )
+ DEBUG [f33580ea] 	fatal: Not a valid object name
+ DEBUG [f33580ea] 	tar: 
+ DEBUG [f33580ea] 	This does not look like a tar archive
+ DEBUG [f33580ea] 	
+ DEBUG [f33580ea] 	tar: 
+ DEBUG [f33580ea] 	Exiting with failure status due to previous errors
+ DEBUG [f33580ea] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 01:00:45 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f30c8e92] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [f30c8e92] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f30c8e92] Finished in 2.485 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-staging-loray.sh 100.0%
+  INFO [9ca9f996] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh as dev@127.0.0.1
+ DEBUG [9ca9f996] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh
+  INFO [9ca9f996] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [b8c0d7ce] Running /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD as dev@127.0.0.1
+ DEBUG [b8c0d7ce] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD )
+ DEBUG [b8c0d7ce] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f	HEAD
+  INFO [b8c0d7ce] Finished in 1.607 seconds with exit status 0 (successful).
+  INFO [ca48f71d] Running /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases as dev@127.0.0.1
+ DEBUG [ca48f71d] Command: /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases
+  INFO [ca48f71d] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [866f03f5] Running [ -f /home/dev/www/local.test/current/REVISION ] as dev@127.0.0.1
+ DEBUG [866f03f5] Command: [ -f /home/dev/www/local.test/current/REVISION ]
+ DEBUG [866f03f5] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [77ea5795] Running [ -f /home/dev/www/local.test/repo/HEAD ] as dev@127.0.0.1
+ DEBUG [77ea5795] Command: [ -f /home/dev/www/local.test/repo/HEAD ]
+ DEBUG [77ea5795] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/dev/www/local.test/repo
+ DEBUG [65d1a250] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [65d1a250] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [65d1a250] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [f4283d33] Running /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git as dev@127.0.0.1
+ DEBUG [f4283d33] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git )
+  INFO [f4283d33] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [bfa2ae6a] Running /usr/bin/env git remote update --prune as dev@127.0.0.1
+ DEBUG [bfa2ae6a] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bfa2ae6a] 	Fetching origin
+  INFO [bfa2ae6a] Finished in 1.687 seconds with exit status 0 (successful).
+ DEBUG [be907acd] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [be907acd] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [be907acd] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [b07ee7f5] Running /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005230049 as dev@127.0.0.1
+ DEBUG [b07ee7f5] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005230049 )
+  INFO [b07ee7f5] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [ae8b744c] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005230049 as dev@127.0.0.1
+ DEBUG [ae8b744c] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005230049 )
+  INFO [ae8b744c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [2a9d2b40] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [2a9d2b40] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [2a9d2b40] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [add22625] Running /usr/bin/env git rev-list --max-count=1 develop as dev@127.0.0.1
+ DEBUG [add22625] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [add22625] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f
+ DEBUG [add22625] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [df5891c0] Running if test ! -d /home/dev/www/local.test/releases/20171005230049; then echo "Directory does not exist '/home/dev/www/local.test/releases/20171005230049'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [df5891c0] Command: if test ! -d /home/dev/www/local.test/releases/20171005230049; then echo "Directory does not exist '/home/dev/www/local.test/releases/20171005230049'" 1>&2; false; fi
+ DEBUG [df5891c0] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [63a24bf3] Running /usr/bin/env echo "966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f" >> REVISION as dev@127.0.0.1
+ DEBUG [63a24bf3] Command: cd /home/dev/www/local.test/releases/20171005230049 && /usr/bin/env echo "966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f" >> REVISION
+  INFO [63a24bf3] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [e4ffa74b] Running /usr/bin/env ln -s /home/dev/www/local.test/releases/20171005230049 /home/dev/www/local.test/releases/current as dev@127.0.0.1
+ DEBUG [e4ffa74b] Command: /usr/bin/env ln -s /home/dev/www/local.test/releases/20171005230049 /home/dev/www/local.test/releases/current
+  INFO [e4ffa74b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [81d4a6c6] Running /usr/bin/env mv /home/dev/www/local.test/releases/current /home/dev/www/local.test as dev@127.0.0.1
+ DEBUG [81d4a6c6] Command: /usr/bin/env mv /home/dev/www/local.test/releases/current /home/dev/www/local.test
+  INFO [81d4a6c6] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [d7ed9e8a] Running /usr/bin/env ls -x /home/dev/www/local.test/releases as dev@127.0.0.1
+ DEBUG [d7ed9e8a] Command: /usr/bin/env ls -x /home/dev/www/local.test/releases
+ DEBUG [d7ed9e8a] 	20171005225544	20171005230049
+ DEBUG [d7ed9e8a] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [b2af04ed] Running if test ! -d /home/dev/www/local.test/releases; then echo "Directory does not exist '/home/dev/www/local.test/releases'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [b2af04ed] Command: if test ! -d /home/dev/www/local.test/releases; then echo "Directory does not exist '/home/dev/www/local.test/releases'" 1>&2; false; fi
+ DEBUG [b2af04ed] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [20abc8eb] Running /usr/bin/env echo "Branch develop (at 966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f) deployed as release 20171005230049 by loray" >> /home/dev/www/local.test/revisions.log as dev@127.0.0.1
+ DEBUG [20abc8eb] Command: cd /home/dev/www/local.test/releases && /usr/bin/env echo "Branch develop (at 966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f) deployed as release 20171005230049 by loray" >> /home/dev/www/local.test/revisions.log
+  INFO [20abc8eb] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-06 01:05:30 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c2bd6512] Running /usr/bin/env mkdir -p /tmp as dev@127.0.0.1
+ DEBUG [c2bd6512] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c2bd6512] Finished in 1.346 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-staging-loray.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-staging-loray.sh 100.0%
+  INFO [0e222d6b] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh as dev@127.0.0.1
+ DEBUG [0e222d6b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-staging-loray.sh
+  INFO [0e222d6b] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [979d84e0] Running /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD as dev@127.0.0.1
+ DEBUG [979d84e0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git ls-remote git@github.com:loraydev/local.test.git HEAD )
+ DEBUG [979d84e0] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f	HEAD
+  INFO [979d84e0] Finished in 1.581 seconds with exit status 0 (successful).
+  INFO [2aa92e1d] Running /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases as dev@127.0.0.1
+ DEBUG [2aa92e1d] Command: /usr/bin/env mkdir -p /home/dev/www/local.test/shared /home/dev/www/local.test/releases
+  INFO [2aa92e1d] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [463ea367] Running [ -f /home/dev/www/local.test/current/REVISION ] as dev@127.0.0.1
+ DEBUG [463ea367] Command: [ -f /home/dev/www/local.test/current/REVISION ]
+ DEBUG [463ea367] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [624823c1] Running /usr/bin/env cat /home/dev/www/local.test/current/REVISION 2>/dev/null as dev@127.0.0.1
+ DEBUG [624823c1] Command: /usr/bin/env cat /home/dev/www/local.test/current/REVISION 2>/dev/null
+ DEBUG [624823c1] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f
+ DEBUG [624823c1] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [824f1b44] Running [ -f /home/dev/www/local.test/repo/HEAD ] as dev@127.0.0.1
+ DEBUG [824f1b44] Command: [ -f /home/dev/www/local.test/repo/HEAD ]
+ DEBUG [824f1b44] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/dev/www/local.test/repo
+ DEBUG [b122c98d] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [b122c98d] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [b122c98d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [dd27130a] Running /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git as dev@127.0.0.1
+ DEBUG [dd27130a] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote set-url origin git@github.com:loraydev/local.test.git )
+  INFO [dd27130a] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [839ff581] Running /usr/bin/env git remote update --prune as dev@127.0.0.1
+ DEBUG [839ff581] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [839ff581] 	Fetching origin
+  INFO [839ff581] Finished in 1.673 seconds with exit status 0 (successful).
+ DEBUG [ff69848c] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [ff69848c] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [ff69848c] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [15627293] Running /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005230533 as dev@127.0.0.1
+ DEBUG [15627293] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env mkdir -p /home/dev/www/local.test/releases/20171005230533 )
+  INFO [15627293] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [e9ef76de] Running /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005230533 as dev@127.0.0.1
+ DEBUG [e9ef76de] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git archive develop | /usr/bin/env tar -x -f - -C /home/dev/www/local.test/releases/20171005230533 )
+  INFO [e9ef76de] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [56197c09] Running if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [56197c09] Command: if test ! -d /home/dev/www/local.test/repo; then echo "Directory does not exist '/home/dev/www/local.test/repo'" 1>&2; false; fi
+ DEBUG [56197c09] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [74d30cb9] Running /usr/bin/env git rev-list --max-count=1 develop as dev@127.0.0.1
+ DEBUG [74d30cb9] Command: cd /home/dev/www/local.test/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-staging-loray.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [74d30cb9] 	966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f
+ DEBUG [74d30cb9] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [b9d86dad] Running if test ! -d /home/dev/www/local.test/releases/20171005230533; then echo "Directory does not exist '/home/dev/www/local.test/releases/20171005230533'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [b9d86dad] Command: if test ! -d /home/dev/www/local.test/releases/20171005230533; then echo "Directory does not exist '/home/dev/www/local.test/releases/20171005230533'" 1>&2; false; fi
+ DEBUG [b9d86dad] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [01b44733] Running /usr/bin/env echo "966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f" >> REVISION as dev@127.0.0.1
+ DEBUG [01b44733] Command: cd /home/dev/www/local.test/releases/20171005230533 && /usr/bin/env echo "966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f" >> REVISION
+  INFO [01b44733] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [da94418f] Running /usr/bin/env ln -s /home/dev/www/local.test/releases/20171005230533 /home/dev/www/local.test/releases/current as dev@127.0.0.1
+ DEBUG [da94418f] Command: /usr/bin/env ln -s /home/dev/www/local.test/releases/20171005230533 /home/dev/www/local.test/releases/current
+  INFO [da94418f] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [3ea550af] Running /usr/bin/env mv /home/dev/www/local.test/releases/current /home/dev/www/local.test as dev@127.0.0.1
+ DEBUG [3ea550af] Command: /usr/bin/env mv /home/dev/www/local.test/releases/current /home/dev/www/local.test
+  INFO [3ea550af] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [c3fde40b] Running /usr/bin/env ls -x /home/dev/www/local.test/releases as dev@127.0.0.1
+ DEBUG [c3fde40b] Command: /usr/bin/env ls -x /home/dev/www/local.test/releases
+ DEBUG [c3fde40b] 	20171005225544	20171005230049	20171005230533
+ DEBUG [c3fde40b] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [0defc6f4] Running if test ! -d /home/dev/www/local.test/releases; then echo "Directory does not exist '/home/dev/www/local.test/releases'" 1>&2; false; fi as dev@127.0.0.1
+ DEBUG [0defc6f4] Command: if test ! -d /home/dev/www/local.test/releases; then echo "Directory does not exist '/home/dev/www/local.test/releases'" 1>&2; false; fi
+ DEBUG [0defc6f4] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [2a338697] Running /usr/bin/env echo "Branch develop (at 966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f) deployed as release 20171005230533 by loray" >> /home/dev/www/local.test/revisions.log as dev@127.0.0.1
+ DEBUG [2a338697] Command: cd /home/dev/www/local.test/releases && /usr/bin/env echo "Branch develop (at 966990e66d3e147a61a9fcac6fd6fcd9d08f8f8f) deployed as release 20171005230533 by loray" >> /home/dev/www/local.test/revisions.log
+  INFO [2a338697] Finished in 0.007 seconds with exit status 0 (successful).

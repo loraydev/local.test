@@ -2,13 +2,13 @@
 lock "3.9.1"
 
 set :application, "Test"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:loraydev/local.test.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/dev/www/local.test"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
